@@ -8,11 +8,10 @@ class Backgrounds {
 
   static final Container backgroundDefault = Container(
     decoration: BoxDecoration(
-      color: defaultLightColor,
-      /*gradient: LinearGradient(
+      gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [default_light_color, default_dark_color]),*/
+          colors: [defaultLightColor, defaultDarkColor]),
     ),
   );
 }

@@ -1,5 +1,6 @@
 import 'package:date_app/backgrounds.dart';
 import 'package:date_app/buttonsStyle.dart';
+import 'package:date_app/strings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,12 +38,25 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Image.asset('assets/logo.png',
-                alignment: Alignment(0, 9),
+                alignment: Alignment(0, -10),
                 width: MediaQuery.of(context).size.width * 0.20,
                 height: MediaQuery.of(context).size.height * 0.20),
-            Row(children: <Widget>[ButtonsStyle.buttonDefault]),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(child: ButtonsStyle.signInButton),
+                Container(child: ButtonsStyle.signUpButton),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.all(30.0),
+              child: Text(Strings.loginProblems,
+                  style: TextStyle(color: Color(0xFFC8A459), fontSize: 15)),
+            ),
           ],
         ),
       ),

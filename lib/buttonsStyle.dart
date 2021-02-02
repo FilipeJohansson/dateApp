@@ -6,7 +6,7 @@ class ButtonsStyle {
 
   static const defaultButtonBorderColor = Color(0xFFC8A459);
 
-  static final RaisedButton buttonDefault = RaisedButton(
+  static final RaisedButton signInButton = RaisedButton(
     color: Color(0xFF1E282D),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(5),
@@ -17,6 +17,23 @@ class ButtonsStyle {
           EdgeInsets.only(top: 20.0, bottom: 20.0, right: 36.0, left: 36.0),
       child: Text(
         Strings.signIn,
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
+    ),
+    onPressed: () {},
+  );
+
+  static final RaisedButton signUpButton = RaisedButton(
+    color: Color(0xFF1E282D),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5),
+      side: BorderSide(color: defaultButtonBorderColor, width: 3),
+    ),
+    child: Padding(
+      padding:
+          EdgeInsets.only(top: 20.0, bottom: 20.0, right: 36.0, left: 36.0),
+      child: Text(
+        Strings.signUp,
         style: TextStyle(color: Colors.white, fontSize: 20),
       ),
     ),
