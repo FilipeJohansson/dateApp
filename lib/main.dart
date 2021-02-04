@@ -33,6 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //ButtonsStyle button = new ButtonsStyle();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,8 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(child: ButtonsStyle.signInButton),
-                Container(child: ButtonsStyle.signUpButton),
+                Container(child: ButtonsStyle.defaultButton(Strings.signIn)),
+                Container(child: ButtonsStyle.defaultButton(Strings.signUp)),
               ],
             ),
             Padding(
