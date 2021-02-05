@@ -101,3 +101,33 @@ class _ActionButton extends State<ActionButton> {
     );
   }
 }
+
+class TxtButton extends StatefulWidget {
+  final String text;
+  final OnTap onTap;
+
+  const TxtButton({Key key, this.text, this.onTap}) : super(key: key);
+
+  @override
+  _TxtButton createState() => _TxtButton();
+}
+
+class _TxtButton extends State<TxtButton> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: FlatButton(
+        color: Colors.transparent,
+        child: Text(widget.text,
+            style: TextStyle(color: Color(0xFFBC9559), fontSize: 15)),
+        onPressed: () {
+          setState(() {
+            if (widget.onTap != null) {
+              widget.onTap();
+            }
+          });
+        },
+      ),
+    );
+  }
+}

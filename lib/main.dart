@@ -68,9 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(30.0),
-                child: Text(Strings.loginProblems,
-                    style: TextStyle(color: Color(0xFFBC9559), fontSize: 15)),
+                padding: EdgeInsets.all(10.0),
+                child: TxtButton(
+                  text: Strings.loginProblems,
+                  onTap: () {
+                    print(Strings.loginProblems);
+                  },
+                ),
               ),
             ],
           ),
