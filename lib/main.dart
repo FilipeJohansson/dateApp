@@ -44,18 +44,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: Alignment(0, -10),
                 width: MediaQuery.of(context).size.width * 0.20,
                 height: MediaQuery.of(context).size.height * 0.20),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(child: ButtonsStyle.signInButton),
-                Container(child: ButtonsStyle.signUpButton),
-              ],
+            ListTile(
+              title: Row(
+                children: <Widget>[
+                  Expanded(child: ButtonsStyle.defaultButton(Strings.signIn)),
+                  Expanded(child: ButtonsStyle.defaultButton(Strings.signUp)),
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsets.all(30.0),
               child: Text(Strings.loginProblems,
-                  style: TextStyle(color: Color(0xFFC8A459), fontSize: 15)),
+                  style: TextStyle(color: Color(0xFFBC9559), fontSize: 15)),
             ),
           ],
         ),
