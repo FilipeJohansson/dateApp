@@ -144,8 +144,7 @@ class TxtButton extends StatefulWidget {
 class _TxtButton extends State<TxtButton> {
   @override
   Widget build(BuildContext context) {
-    Widget current;
-    Widget button = Container(
+    return Container(
       child: FlatButton(
         color: Colors.transparent,
         child: Text(widget.text,
@@ -162,16 +161,5 @@ class _TxtButton extends State<TxtButton> {
         },
       ),
     );
-
-    bool _isExpanded = true;
-
-    if (widget.expanded == false) _isExpanded = false;
-
-    if (_isExpanded)
-      current = Expanded(child: button);
-    else
-      current = button;
-
-    return current;
   }
 }
