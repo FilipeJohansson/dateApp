@@ -37,47 +37,41 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: DefaultBackground(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Image.asset('assets/logo.png',
-                  alignment: Alignment(0, -10),
-                  width: MediaQuery.of(context).size.width * 0.20,
-                  height: MediaQuery.of(context).size.height * 0.20),
-              ListTile(
-                title: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: DefaultButton(
-                      text: Strings.signIn,
-                      margin: EdgeInsets.only(right: 4.5),
-                      onTap: () {
-                        print(Strings.signIn);
-                      },
-                    )),
-                    Expanded(
-                        child: ActionButton(
-                      text: Strings.signUp,
-                      margin: EdgeInsets.only(left: 4.5),
-                      onTap: () {
-                        print(Strings.signUp);
-                      },
-                    )),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(10.0),
-                child: TxtButton(
-                  text: Strings.loginProblems,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Image.asset('assets/logo.png',
+                alignment: Alignment(0, -10),
+                width: MediaQuery.of(context).size.width * 0.20,
+                height: MediaQuery.of(context).size.height * 0.20),
+            Row(
+              children: <Widget>[
+                DefaultButton(
+                  text: Strings.signIn,
+                  margin: EdgeInsets.only(right: 4.5, left: 10),
                   onTap: () {
-                    print(Strings.loginProblems);
+                    print(Strings.signIn);
                   },
                 ),
+                ActionButton(
+                  text: Strings.signUp,
+                  margin: EdgeInsets.only(right: 4.5, left: 4.5),
+                  onTap: () {
+                    print(Strings.signUp);
+                  },
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: TxtButton(
+                text: Strings.loginProblems,
+                onTap: () {
+                  print(Strings.loginProblems);
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

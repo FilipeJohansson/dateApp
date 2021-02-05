@@ -9,8 +9,9 @@ class DefaultButton extends StatefulWidget {
   final String text;
   final EdgeInsetsGeometry margin;
   final OnTap onTap;
+  final bool expanded;
 
-  DefaultButton({Key key, this.text, this.margin, this.onTap})
+  DefaultButton({Key key, this.text, this.margin, this.onTap, this.expanded})
       : super(key: key);
 
   @override
@@ -20,7 +21,8 @@ class DefaultButton extends StatefulWidget {
 class _DefaultButton extends State<DefaultButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Widget current;
+    Widget button = Container(
       margin: widget.margin,
       child: OutlineGradientButton(
         backgroundColor: AppColors.backgroud,
@@ -51,6 +53,17 @@ class _DefaultButton extends State<DefaultButton> {
         },
       ),
     );
+
+    bool _isExpanded = true;
+
+    if (widget.expanded == false) _isExpanded = false;
+
+    if (_isExpanded)
+      current = Expanded(child: button);
+    else
+      current = button;
+
+    return current;
   }
 }
 
@@ -58,8 +71,10 @@ class ActionButton extends StatefulWidget {
   final String text;
   final EdgeInsetsGeometry margin;
   final OnTap onTap;
+  final bool expanded;
 
-  ActionButton({Key key, this.text, this.margin, this.onTap}) : super(key: key);
+  ActionButton({Key key, this.text, this.margin, this.onTap, this.expanded})
+      : super(key: key);
 
   @override
   _ActionButton createState() => _ActionButton();
@@ -68,7 +83,8 @@ class ActionButton extends StatefulWidget {
 class _ActionButton extends State<ActionButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Widget current;
+    Widget button = Container(
       margin: widget.margin,
       child: OutlineGradientButton(
         backgroundColor: AppColors.backgroud,
@@ -99,6 +115,17 @@ class _ActionButton extends State<ActionButton> {
         },
       ),
     );
+
+    bool _isExpanded = true;
+
+    if (widget.expanded == false) _isExpanded = false;
+
+    if (_isExpanded)
+      current = Expanded(child: button);
+    else
+      current = button;
+
+    return current;
   }
 }
 
