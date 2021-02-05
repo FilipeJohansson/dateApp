@@ -48,10 +48,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: MediaQuery.of(context).size.height * 0.20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(child: ButtonsStyle.defaultButton(Strings.signIn)),
-                Container(child: ButtonsStyle.defaultButton(Strings.signUp)),
+                Expanded(child: ButtonsStyle.defaultButton(Strings.signIn)),
+                Expanded(child: ButtonsStyle.defaultButton(Strings.signUp)),
               ],
             ),
             Padding(
