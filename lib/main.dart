@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 ActionButton(
                   text: Strings.signUp,
-                  margin: EdgeInsets.only(right: 4.5, left: 4.5),
+                  margin: EdgeInsets.only(right: 10, left: 4.5),
                   onTap: () {
                     print(Strings.signUp);
                   },

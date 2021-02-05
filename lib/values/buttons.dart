@@ -132,8 +132,10 @@ class _ActionButton extends State<ActionButton> {
 class TxtButton extends StatefulWidget {
   final String text;
   final OnTap onTap;
+  final bool expanded;
 
-  const TxtButton({Key key, this.text, this.onTap}) : super(key: key);
+  const TxtButton({Key key, this.text, this.onTap, this.expanded})
+      : super(key: key);
 
   @override
   _TxtButton createState() => _TxtButton();
@@ -142,7 +144,8 @@ class TxtButton extends StatefulWidget {
 class _TxtButton extends State<TxtButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Widget current;
+    Widget button = Container(
       child: FlatButton(
         color: Colors.transparent,
         child: Text(widget.text,
@@ -159,5 +162,16 @@ class _TxtButton extends State<TxtButton> {
         },
       ),
     );
+
+    bool _isExpanded = true;
+
+    if (widget.expanded == false) _isExpanded = false;
+
+    if (_isExpanded)
+      current = Expanded(child: button);
+    else
+      current = button;
+
+    return current;
   }
 }
