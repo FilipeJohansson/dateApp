@@ -1,3 +1,4 @@
+import 'package:date_app/appColors.dart';
 import 'package:date_app/backgrounds.dart';
 import 'package:date_app/buttonsStyle.dart';
 import 'package:date_app/strings.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Backgrounds.defaultLightColor,
+        scaffoldBackgroundColor: AppColors.backgroud,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
@@ -50,10 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                       child: DefaultButton(
                     text: Strings.signIn,
+                    func: () {
+                      print(Strings.signIn);
+                    },
                   )),
                   Expanded(
                       child: DefaultButton(
                     text: Strings.signUp,
+                    func: () {
+                      print(Strings.signUp);
+                    },
                   )),
                 ],
               ),

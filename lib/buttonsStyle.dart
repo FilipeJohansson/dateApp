@@ -3,10 +3,14 @@ import 'package:outline_gradient_button/outline_gradient_button.dart';
 
 import 'appColors.dart';
 
-class DefaultButton extends StatefulWidget {
-  DefaultButton({Key key, this.text}) : super(key: key);
+typedef Func = void Function();
 
+class DefaultButton extends StatefulWidget {
   final String text;
+  final Func func;
+
+  DefaultButton({Key key, @required this.text, @required this.func})
+      : super(key: key);
 
   @override
   _DefaultButton createState() => _DefaultButton();
@@ -20,18 +24,12 @@ class _DefaultButton extends State<DefaultButton> {
     return Container(
       margin: EdgeInsets.only(right: 3, left: 3),
       child: OutlineGradientButton(
-        backgroundColor: AppColors.defaultButtonBackgroud,
+        backgroundColor: AppColors.backgroud,
         padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
         gradient: LinearGradient(
           colors: _hasBeenPressed
-              ? [
-                  AppColors.defaultButtonBorderPressedLight,
-                  AppColors.defaultButtonBorderPressedDark
-                ]
-              : [
-                  AppColors.defaultButtonBorderColorLight,
-                  AppColors.defaultButtonBorderColorDark
-                ],
+              ? [AppColors.blueLight, AppColors.blueDark]
+              : [AppColors.goldenLight, AppColors.goldenDark],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
@@ -50,6 +48,10 @@ class _DefaultButton extends State<DefaultButton> {
         onTap: () {
           setState(() {
             _hasBeenPressed = !_hasBeenPressed;
+
+            if (widget.func != null) {
+              widget.func();
+            }
           });
         },
       ),
