@@ -47,8 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Row(
                 children: <Widget>[
-                  Expanded(child: ButtonsStyle.defaultButton(Strings.signIn)),
-                  Expanded(child: ButtonsStyle.defaultButton(Strings.signUp)),
+                  Expanded(
+                      child: DefaultButton(
+                    text: Strings.signIn,
+                  )),
+                  Expanded(
+                      child: DefaultButton(
+                    text: Strings.signUp,
+                  )),
                 ],
               ),
             ),
