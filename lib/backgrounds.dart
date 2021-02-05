@@ -1,4 +1,4 @@
-import 'package:date_app/appColors.dart';
+import 'package:date_app/values/appColors.dart';
 import 'package:flutter/material.dart';
 
 class Backgrounds {

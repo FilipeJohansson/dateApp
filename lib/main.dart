@@ -1,6 +1,6 @@
-import 'package:date_app/appColors.dart';
+import 'package:date_app/values/appColors.dart';
 import 'package:date_app/backgrounds.dart';
-import 'package:date_app/buttonsStyle.dart';
+import 'package:date_app/values/buttonsStyle.dart';
 import 'package:date_app/strings.dart';
 import 'package:flutter/material.dart';
 
@@ -51,14 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                       child: DefaultButton(
                     text: Strings.signIn,
-                    func: () {
+                    margin: EdgeInsets.only(right: 4.5),
+                    onTap: () {
                       print(Strings.signIn);
                     },
                   )),
                   Expanded(
-                      child: DefaultButton(
+                      child: ActionButton(
                     text: Strings.signUp,
-                    func: () {
+                    margin: EdgeInsets.only(left: 4.5),
+                    onTap: () {
                       print(Strings.signUp);
                     },
                   )),
