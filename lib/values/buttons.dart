@@ -119,7 +119,10 @@ class _TxtButton extends State<TxtButton> {
       child: FlatButton(
         color: Colors.transparent,
         child: Text(widget.text,
-            style: TextStyle(color: Color(0xFFBC9559), fontSize: 15)),
+            style: TextStyle(
+                color: Color(0xFFBC9559),
+                fontSize: 15,
+                decoration: TextDecoration.underline)),
         onPressed: () {
           setState(() {
             if (widget.onTap != null) {
