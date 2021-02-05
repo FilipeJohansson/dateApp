@@ -4,4 +4,5 @@ class Strings {
   static const String signUp = 'REGISTRAR';
   static const String google = 'GOOGLE';
   static const String facebook = 'FACEBOOK';
+  static const String signUpTitle = 'Registrar';
 }
