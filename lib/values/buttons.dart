@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:outline_gradient_button/outline_gradient_button.dart';
 
-import 'appColors.dart';
+import 'colors.dart';
 
 typedef OnTap = void Function();
 

@@ -1,6 +1,5 @@
-import 'package:date_app/values/appColors.dart';
-import 'package:date_app/backgrounds.dart';
-import 'package:date_app/values/buttonsStyle.dart';
+import 'package:date_app/values/colors.dart';
+import 'package:date_app/values/buttons.dart';
 import 'package:date_app/strings.dart';
 import 'package:flutter/material.dart';
 
