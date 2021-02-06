@@ -17,11 +17,18 @@ class _Register extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
       body: DefaultBackground(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            Text(Strings.signUpTitle,
+                style: TextStyle(color: Colors.white, fontSize: 40)),
             DefaultButton(
               text: Strings.google,
               margin: EdgeInsets.only(

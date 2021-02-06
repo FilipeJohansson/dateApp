@@ -18,6 +18,11 @@ class _Login extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
       body: DefaultBackground(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
