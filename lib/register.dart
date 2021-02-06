@@ -20,6 +20,9 @@ class _Register extends State<Register> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         elevation: 0.0,
       ),
       body: DefaultBackground(
@@ -27,8 +30,10 @@ class _Register extends State<Register> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(Strings.signUpTitle,
-                style: TextStyle(color: Colors.white, fontSize: 40)),
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+              Text(Strings.signUpTitle,
+                  style: TextStyle(color: Colors.white, fontSize: 40)),
+            ]),
             DefaultButton(
               text: Strings.google,
               margin: EdgeInsets.only(

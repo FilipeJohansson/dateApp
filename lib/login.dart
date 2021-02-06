@@ -21,6 +21,9 @@ class _Login extends State<Login> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
         elevation: 0.0,
       ),
       body: DefaultBackground(
