@@ -17,23 +17,35 @@ class _Login extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DefaultBackground(children: <Widget>[
-        Text(Strings.signUpTitle,
-            style: TextStyle(color: Colors.white, fontSize: 40)),
-        Column(
+      body: DefaultBackground(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            TextFormField(
+              initialValue: Strings.username,
+              decoration: InputDecoration(
+                labelStyle: TextStyle(
+                  backgroundColor: Colors.white
+                  ),
+                errorText: 'Error message',
+                border: OutlineInputBorder(),
+                suffixIcon: Icon(
+                  Icons.error,
+                ),
+              ),
+            ),
             DefaultButton(
               text: Strings.signIn,
               margin: EdgeInsets.only(
-                  right: _buttonsMarginSide,
-                  left: _buttonsMarginSide,
-                  bottom: 20),
+                right: _buttonsMarginSide,
+                left: _buttonsMarginSide,
+                bottom: 20),
+              expanded: false,
             ),
           ],
         ),
-      ]),
+      ),
     );
   }
 }

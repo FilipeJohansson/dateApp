@@ -17,10 +17,8 @@ class _Register extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DefaultBackground(children: <Widget>[
-        Text(Strings.signUpTitle,
-            style: TextStyle(color: Colors.white, fontSize: 40)),
-        Column(
+      body: DefaultBackground(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
@@ -40,7 +38,7 @@ class _Register extends State<Register> {
             ),
           ],
         ),
-      ]),
+      ),
     );
   }
 }
