@@ -7,4 +7,6 @@ class Strings {
   static const String signUpTitle = 'Registrar';
   static const String username = 'Nome de Usuário';
   static const String password = 'Senha';
+  static const String hintEmail = 'dani@example.com.br';
+  static const String hintPass = 's3Nh@';
 }

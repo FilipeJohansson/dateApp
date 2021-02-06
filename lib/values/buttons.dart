@@ -32,7 +32,7 @@ class _DefaultButton extends State<DefaultButton> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
-        strokeWidth: 2,
+        strokeWidth: 3,
         radius: Radius.circular(4),
         child: Center(
           child: Text(

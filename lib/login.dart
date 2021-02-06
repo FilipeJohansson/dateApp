@@ -1,3 +1,4 @@
+import 'package:date_app/values/inputs.dart';
 import 'package:date_app/values/strings.dart';
 import 'package:date_app/values/backgrounds.dart';
 import 'package:date_app/values/buttons.dart';
@@ -22,25 +23,19 @@ class _Login extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            TextFormField(
-              initialValue: Strings.username,
-              decoration: InputDecoration(
-                labelStyle: TextStyle(
-                  backgroundColor: Colors.white
-                  ),
-                errorText: 'Error message',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(
-                  Icons.error,
-                ),
-              ),
-            ),
+            DefaultInput(
+                hint: Strings.hintEmail,
+                margin: EdgeInsets.only(right: 10, left: 10, bottom: 20)),
+            DefaultInput(
+                hint: Strings.hintPass,
+                type: 'Password',
+                margin: EdgeInsets.only(right: 10, left: 10, bottom: 20)),
             DefaultButton(
               text: Strings.signIn,
               margin: EdgeInsets.only(
-                right: _buttonsMarginSide,
-                left: _buttonsMarginSide,
-                bottom: 20),
+                  right: _buttonsMarginSide,
+                  left: _buttonsMarginSide,
+                  bottom: 20),
               expanded: false,
             ),
           ],
