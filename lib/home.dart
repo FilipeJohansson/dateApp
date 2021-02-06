@@ -32,7 +32,7 @@ class _Home extends State<Home> {
                     Navigator.pushNamed(context, "/login");
                   },
                 ),
-                ActionButton(
+                DefaultButton(
                   text: Strings.signUp,
                   margin: EdgeInsets.only(right: 10, left: 4.5),
                   onTap: () {
