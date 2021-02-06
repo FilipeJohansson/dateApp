@@ -1,5 +1,6 @@
-import 'package:date_app/register.dart';
 import 'package:flutter/material.dart';
+import 'package:date_app/login.dart';
+import 'package:date_app/register.dart';
 
 import 'home.dart';
 
@@ -25,6 +26,7 @@ class _AppState extends State<App> {
         routes: {
           '/home': (context) => Home(),
           '/register': (context) => Register(),
+          '/login': (context) => Login(),
         });
   }
 }

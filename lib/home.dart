@@ -29,7 +29,7 @@ class _Home extends State<Home> {
                   text: Strings.signIn,
                   margin: EdgeInsets.only(right: 4.5, left: 10),
                   onTap: () {
-                    print(Strings.signIn);
+                    Navigator.pushNamed(context, "/login");
                   },
                 ),
                 ActionButton(
