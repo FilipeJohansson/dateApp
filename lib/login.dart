@@ -28,23 +28,48 @@ class _Login extends State<Login> {
       ),
       body: DefaultBackground(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            DefaultInput(
-                hint: Strings.hintEmail,
-                margin: EdgeInsets.only(right: 10, left: 10, bottom: 20)),
-            DefaultInput(
-                hint: Strings.hintPass,
-                type: 'Password',
-                margin: EdgeInsets.only(right: 10, left: 10, bottom: 20)),
-            DefaultButton(
-              text: Strings.signIn,
-              margin: EdgeInsets.only(
-                  right: _buttonsMarginSide,
-                  left: _buttonsMarginSide,
-                  bottom: 20),
-              expanded: false,
+          children: [
+            SizedBox(
+              height: kToolbarHeight + 20,
+            ),
+            Flexible(
+              flex: 1,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 10.0,
+                    ),
+                    child: Text(Strings.signInTitle,
+                        style: TextStyle(color: Colors.white, fontSize: 40)),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 2,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  DefaultInput(
+                    hint: Strings.hintEmail,
+                    margin: EdgeInsets.only(right: 10, left: 10, bottom: 20),
+                  ),
+                  DefaultInput(
+                    hint: Strings.hintPass,
+                    type: 'Password',
+                    margin: EdgeInsets.only(right: 10, left: 10, bottom: 20),
+                  ),
+                  DefaultButton(
+                    text: Strings.signIn,
+                    margin: EdgeInsets.only(
+                      right: _buttonsMarginSide,
+                      left: _buttonsMarginSide,
+                    ),
+                    expanded: false,
+                  ),
+                ],
+              ),
             ),
           ],
         ),

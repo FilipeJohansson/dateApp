@@ -33,9 +33,9 @@ class _Register extends State<Register> {
               SizedBox(
                 height: kToolbarHeight + 20,
               ),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              Flexible(
+                flex: 1,
+                child: Row(
                   children: [
                     Padding(
                       padding: EdgeInsets.symmetric(
@@ -44,89 +44,80 @@ class _Register extends State<Register> {
                       child: Text(Strings.signUpTitle,
                           style: TextStyle(color: Colors.white, fontSize: 40)),
                     ),
-                    Container(
-                      constraints: BoxConstraints(
-                        minHeight: MediaQuery.of(context).size.height / 1.5,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                DefaultButton(
-                                  text: Strings.google,
-                                  margin: EdgeInsets.only(
-                                      right: _buttonsMarginSide,
-                                      left: _buttonsMarginSide,
-                                      bottom: 20),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            child: Row(
-                              children: [
-                                DefaultButton(
-                                  text: Strings.facebook,
-                                  margin: EdgeInsets.only(
-                                      right: _buttonsMarginSide,
-                                      left: _buttonsMarginSide,
-                                      bottom: 20),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                  ],
+                ),
+              ),
+              Flexible(
+                flex: 5,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DefaultButton(
+                      text: Strings.google,
+                      margin: EdgeInsets.only(
+                          right: _buttonsMarginSide,
+                          left: _buttonsMarginSide,
+                          bottom: 20),
+                      expanded: false,
+                    ),
+                    DefaultButton(
+                      text: Strings.facebook,
+                      margin: EdgeInsets.only(
+                          right: _buttonsMarginSide,
+                          left: _buttonsMarginSide,
+                          bottom: 20),
+                      expanded: false,
                     ),
                   ],
                 ),
               ),
-              Container(
-                constraints: BoxConstraints(
-                  minHeight: MediaQuery.of(context).size.height / 11,
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.0,
-                  ),
-                  child: RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: Strings.agree,
-                          style: TextStyle(
-                            color: Color(0xFFBC9559),
-                            fontSize: 15,
-                          ),
+              Flexible(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.0,
+                      ),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: Strings.agree,
+                              style: TextStyle(
+                                color: Color(0xFFBC9559),
+                                fontSize: 15,
+                              ),
+                            ),
+                            TextSpan(
+                              text: Strings.terms,
+                              style: TextStyle(
+                                  color: Color(0xFFBC9559),
+                                  fontSize: 15,
+                                  decoration: TextDecoration.underline),
+                              recognizer: TapGestureRecognizer()..onTap = () {},
+                            ),
+                            TextSpan(
+                              text: ' and ',
+                              style: TextStyle(
+                                color: Color(0xFFBC9559),
+                                fontSize: 15,
+                              ),
+                            ),
+                            TextSpan(
+                              text: Strings.policy,
+                              style: TextStyle(
+                                  color: Color(0xFFBC9559),
+                                  fontSize: 15,
+                                  decoration: TextDecoration.underline),
+                              recognizer: TapGestureRecognizer()..onTap = () {},
+                            ),
+                          ],
                         ),
-                        TextSpan(
-                          text: Strings.terms,
-                          style: TextStyle(
-                              color: Color(0xFFBC9559),
-                              fontSize: 15,
-                              decoration: TextDecoration.underline),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                        TextSpan(
-                          text: ' and ',
-                          style: TextStyle(
-                            color: Color(0xFFBC9559),
-                            fontSize: 15,
-                          ),
-                        ),
-                        TextSpan(
-                          text: Strings.policy,
-                          style: TextStyle(
-                              color: Color(0xFFBC9559),
-                              fontSize: 15,
-                              decoration: TextDecoration.underline),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ],

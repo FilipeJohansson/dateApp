@@ -17,37 +17,61 @@ class _Home extends State<Home> {
     return Scaffold(
       body: DefaultBackground(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Image.asset('assets/logo.png',
-                alignment: Alignment(0, -10),
-                width: MediaQuery.of(context).size.width * 0.20,
-                height: MediaQuery.of(context).size.height * 0.20),
-            Row(
-              children: <Widget>[
-                DefaultButton(
-                  text: Strings.signIn,
-                  margin: EdgeInsets.only(right: 4.5, left: 10),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/login");
-                  },
-                ),
-                DefaultButton(
-                  text: Strings.signUp,
-                  margin: EdgeInsets.only(right: 10, left: 4.5),
-                  onTap: () {
-                    Navigator.pushNamed(context, "/register");
-                  },
-                ),
-              ],
+          children: [
+            Flexible(
+              flex: 7,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/logo.png',
+                      width: MediaQuery.of(context).size.width * 0.20,
+                      height: MediaQuery.of(context).size.height * 0.20),
+                ],
+              ),
             ),
-            Padding(
-              padding: EdgeInsets.all(10.0),
-              child: TxtButton(
-                text: Strings.loginProblems,
-                onTap: () {
-                  print(Strings.loginProblems);
-                },
+            Flexible(
+              flex: 1,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Row(
+                    children: [
+                      DefaultButton(
+                        text: Strings.signIn,
+                        margin: EdgeInsets.only(right: 4.5, left: 10),
+                        onTap: () {
+                          Navigator.pushNamed(context, "/login");
+                        },
+                      ),
+                      DefaultButton(
+                        text: Strings.signUp,
+                        margin: EdgeInsets.only(right: 10, left: 4.5),
+                        onTap: () {
+                          Navigator.pushNamed(context, "/register");
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 10.0,
+                    ),
+                    child: TxtButton(
+                      text: Strings.loginProblems,
+                      onTap: () {
+                        print(Strings.loginProblems);
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

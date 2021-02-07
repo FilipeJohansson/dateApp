@@ -5,6 +5,7 @@ class Strings {
   static const String google = 'GOOGLE';
   static const String facebook = 'FACEBOOK';
   static const String signUpTitle = 'Registrar';
+  static const String signInTitle = 'Entrar';
   static const String username = 'Nome de Usuário';
   static const String password = 'Senha';
   static const String hintEmail = 'dani@example.com.br';
