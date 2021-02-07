@@ -47,9 +47,9 @@ class _Login extends State<Login> {
               ),
             ),
             Flexible(
-              flex: 2,
+              flex: 3,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   DefaultInput(
                     hint: Strings.hintEmail,
@@ -58,15 +58,53 @@ class _Login extends State<Login> {
                   DefaultInput(
                     hint: Strings.hintPass,
                     type: 'Password',
-                    margin: EdgeInsets.only(right: 10, left: 10, bottom: 20),
+                    margin: EdgeInsets.only(right: 10, left: 10),
                   ),
-                  DefaultButton(
-                    text: Strings.signIn,
-                    margin: EdgeInsets.only(
-                      right: _buttonsMarginSide,
-                      left: _buttonsMarginSide,
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10.0,
                     ),
-                    expanded: false,
+                    child: Row(
+                      children: [
+                        TxtButton(
+                          text: 'Esqueceu a senha?',
+                        ),
+                        ActionButton(
+                          text: Strings.signIn,
+                          margin: EdgeInsets.only(
+                            right: _buttonsMarginSide,
+                            left: _buttonsMarginSide,
+                          ),
+                          expanded: true,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 30.0,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        BrownButton(
+                          text: Strings.google,
+                          margin: EdgeInsets.only(
+                              right: _buttonsMarginSide,
+                              left: _buttonsMarginSide,
+                              bottom: 20),
+                          image: 'assets/images/googleIcon.png',
+                        ),
+                        BrownButton(
+                          text: Strings.facebook,
+                          margin: EdgeInsets.only(
+                              right: _buttonsMarginSide,
+                              left: _buttonsMarginSide,
+                              bottom: 20),
+                          image: 'assets/images/facebookIcon.png',
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

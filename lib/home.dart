@@ -23,7 +23,7 @@ class _Home extends State<Home> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/logo.png',
+                  Image.asset('assets/images/logo.png',
                       width: MediaQuery.of(context).size.width * 0.20,
                       height: MediaQuery.of(context).size.height * 0.20),
                 ],

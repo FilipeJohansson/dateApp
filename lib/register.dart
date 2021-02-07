@@ -52,21 +52,23 @@ class _Register extends State<Register> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    DefaultButton(
+                    BrownButton(
                       text: Strings.google,
                       margin: EdgeInsets.only(
                           right: _buttonsMarginSide,
                           left: _buttonsMarginSide,
                           bottom: 20),
                       expanded: false,
+                      image: 'assets/images/googleIcon.png',
                     ),
-                    DefaultButton(
+                    BrownButton(
                       text: Strings.facebook,
                       margin: EdgeInsets.only(
                           right: _buttonsMarginSide,
                           left: _buttonsMarginSide,
                           bottom: 20),
                       expanded: false,
+                      image: 'assets/images/facebookIcon.png',
                     ),
                   ],
                 ),
