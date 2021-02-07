@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:date_app/login.dart';
 import 'package:date_app/register.dart';
-
-import 'home.dart';
+import 'package:date_app/home.dart';
 
 void main() {
   runApp(App());
@@ -21,7 +20,6 @@ class _AppState extends State<App> {
         theme: ThemeData.from(
             colorScheme:
                 ColorScheme.fromSwatch(primarySwatch: Colors.lightGreen)),
-        home: Home(),
         initialRoute: '/home',
         routes: {
           '/home': (context) => Home(),

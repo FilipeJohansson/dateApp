@@ -144,22 +144,20 @@ class TxtButton extends StatefulWidget {
 class _TxtButton extends State<TxtButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: FlatButton(
-        color: Colors.transparent,
-        child: Text(widget.text,
-            style: TextStyle(
-                color: Color(0xFFBC9559),
-                fontSize: 15,
-                decoration: TextDecoration.underline)),
-        onPressed: () {
-          setState(() {
-            if (widget.onTap != null) {
-              widget.onTap();
-            }
-          });
-        },
-      ),
+    return FlatButton(
+      color: Colors.transparent,
+      child: Text(widget.text,
+          style: TextStyle(
+              color: Color(0xFFBC9559),
+              fontSize: 15,
+              decoration: TextDecoration.underline)),
+      onPressed: () {
+        setState(() {
+          if (widget.onTap != null) {
+            widget.onTap();
+          }
+        });
+      },
     );
   }
 }

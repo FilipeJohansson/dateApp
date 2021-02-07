@@ -9,4 +9,7 @@ class Strings {
   static const String password = 'Senha';
   static const String hintEmail = 'dani@example.com.br';
   static const String hintPass = 's3Nh@';
+  static const String agree = 'By signing up, you agree to Photo’s ';
+  static const String terms = 'Terms of Service ';
+  static const String policy = 'Privacy Policy.';
 }
