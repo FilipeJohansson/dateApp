@@ -1,6 +1,6 @@
 import 'package:date_app/values/strings.dart';
-import 'package:date_app/values/backgrounds.dart';
-import 'package:date_app/values/buttons.dart';
+import 'package:date_app/widget/backgrounds.dart';
+import 'package:date_app/widget/buttons.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

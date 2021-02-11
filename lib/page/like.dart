@@ -1,7 +1,8 @@
 import 'package:date_app/data/users.dart';
 import 'package:date_app/model/user.dart';
 import 'package:date_app/provider/feedback_position_provider.dart';
-import 'package:date_app/values/backgrounds.dart';
+import 'package:date_app/widget/backgrounds.dart';
+import 'package:date_app/values/colors.dart';
 import 'package:date_app/widget/bottom_buttons_widget.dart';
 import 'package:date_app/widget/user_card_widget.dart';
 import 'package:flutter/material.dart';
@@ -22,12 +23,16 @@ class _Like extends State<Like> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: buildAppBar(),
       body: DefaultBackground(
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
             children: [
+              SizedBox(
+                height: kToolbarHeight + 40,
+              ),
               users.isEmpty
                   ? Text('No more users')
                   : Stack(children: users.map(buildUser).toList()),
@@ -43,13 +48,21 @@ class _Like extends State<Like> {
   Widget buildAppBar() => AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        elevation: 0.0,
         actions: [
-          Icon(Icons.chat, color: Colors.grey),
+          Icon(
+            Icons.chat,
+            color: AppColors.icons,
+            size: 30,
+          ),
           SizedBox(width: 16),
         ],
-        leading: Icon(Icons.person, color: Colors.grey),
-        title: FaIcon(FontAwesomeIcons.fire, color: Colors.deepOrange),
+        leading: Icon(Icons.settings, color: AppColors.icons, size: 30),
+        title: FaIcon(
+          FontAwesomeIcons.fire,
+          color: Colors.deepOrange,
+          size: 40,
+        ),
       );
 
   Widget buildUser(User user) {

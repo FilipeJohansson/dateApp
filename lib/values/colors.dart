@@ -16,8 +16,9 @@ class AppColors {
   static const blueLight = Color(0xFF08BBB5);
   static const blueDark = Color(0xFF036281);
 
-  static const brown = Color(0xFF322C2A);
-
   static const victory = Color(0xFF29B9FD);
   static const defeat = Color(0xFFF14726);
+
+  static const brown = Color(0xFF322C2A);
+  static const icons = Color(0xFFCABC90);
 }

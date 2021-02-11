@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_input_border/gradient_input_border.dart';
 
-import 'colors.dart';
+import '../values/colors.dart';
 
 class DefaultInput extends StatefulWidget {
   final String hint;
