@@ -156,7 +156,7 @@ class _BrownButton extends State<BrownButton> {
     Widget image = Center(
       child: Container(
         constraints: BoxConstraints.expand(
-            height: Theme.of(context).textTheme.headline4.fontSize * 1.1),
+            height: Theme.of(context).textTheme.headline4.fontSize * 0.7),
         child: Row(
           children: [
             Expanded(

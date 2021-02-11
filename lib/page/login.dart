@@ -76,6 +76,9 @@ class _Login extends State<Login> {
                             left: _buttonsMarginSide,
                           ),
                           expanded: true,
+                          onTap: () {
+                            Navigator.pushNamed(context, "/like");
+                          },
                         ),
                       ],
                     ),
